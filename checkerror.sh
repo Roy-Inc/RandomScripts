@@ -12,4 +12,4 @@ if tail -n +`cat /var/logchecker.tmp` /var/log/postgresql/postgresql-9.4-main.lo
 else
         echo "No New errors dude"
 fi
-wc -l postgresql-9.4-main.log | awk  '{print $1}' > /var/logchecker.tmp
+wc -l /var/log/postgresql/postgresql-9.4-main.log | awk  '{print $1}' > /var/logchecker.tmp
